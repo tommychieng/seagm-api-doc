@@ -234,7 +234,7 @@ NONE
 ```
 GET /v1/me?uid=10001&timestamp=xx&sign=xx
 ```
-获取余额等账户信息。
+Get balance and other account information.
 
 **Parameters:**
 NONE
