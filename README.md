@@ -67,23 +67,23 @@ It is important to **NOT** treat this as a failure; the execution status is
  * Signature for this request is not valid.
 
 ## 2xxx - Success
- * 请求成功
+ * Success
 #### 2000 Get Success
- * 获取数据成功
+ * Success
 #### 2010 Post Success
- * 订单下单成功
+ * Order Success
 
 ## 4xxx - Request issues
- * 请求存在问题
+ * The request has a problem
 #### 4000 Error
- * 出现错误
-#### 4010 缺少UID或者UID无效
-#### 4040 请求的内容不存在
-#### 4050 请求的方式不正确
-#### 4060 insufficient credit
+ * Error
+#### 4010 Missing UID or invalid UID
+#### 4040 Not Found
+#### 4050 Invalid Method
+#### 4060 Insufficient Credit
 
 ## 5xxx - Server issues
-#### 5000 服务器故障
+#### 5000 Server failure
 
 # CURRENCY
 * Can only use SEAGM credits to buy cards
