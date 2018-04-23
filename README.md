@@ -356,6 +356,7 @@ GET /v1/card-types/:id
 POST /v1/card-orders 
 ```
 **Parameters:**
+
 Parameter | Value
 ------------ | ------------
 type_id | 1234
