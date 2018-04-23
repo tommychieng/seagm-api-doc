@@ -211,15 +211,15 @@ NONE
 
 **Response:**
 ```javascript
-{}
-```
-
-### Check server time
-```javascript
 {
     "code": 200, 
     "data": "pong"
 }
+```
+
+### Check server time
+```
+GET /time
 ```
 Test connectivity to the Rest API and get the current server time.
 
