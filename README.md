@@ -215,8 +215,11 @@ NONE
 ```
 
 ### Check server time
-```
-GET /time
+```javascript
+{
+    "code": 200, 
+    "data": "pong"
+}
 ```
 Test connectivity to the Rest API and get the current server time.
 
@@ -226,7 +229,8 @@ NONE
 **Response:**
 ```javascript
 {
-  "serverTime": 1499827319
+    "code": 200, 
+    "data": 1499827319
 }
 ```
 
