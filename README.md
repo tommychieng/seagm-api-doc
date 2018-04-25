@@ -265,7 +265,7 @@ Get account history
 **Parameters:**
 
 Parameter | Value | Mandatory
------------- | ------------
+------------ | ------------ | ------------
 uid | 10000 | Yes
 timestamp | 1000000000 | Yes
 limit | 12 | No
