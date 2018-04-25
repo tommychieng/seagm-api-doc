@@ -286,23 +286,16 @@ NONE
 GET /v1/card-categories 
 ```
 
-**Response:**{"code":200,"data":{"total":138,"begin":0,"end":12,"orders":[{"id":6936740,"user_account_id":10002,"handler_id":10002,"currency":"CNY","bank_account_id":null,"action_id":2,"action":"online_payment","relative_id":5957164,"remark":"payment [#P5957164]","created":1522048297,"updated":null,"accountId":10002,"amount":-6.7400000000000002,"
 ```javascript
 {
     "code": 200, 
-    "data": {
-        "total": 138,
-        "begin": 0,
-        "end": 12,
-        "orders": [
-            {
-                "id":6936740,
-                "user_account_id": 10000,
-                "currency": "MYR",
-            },
+    "data": [
+        {
+            "name": "",
             ....
-        ]
-    }
+        },
+        ...
+    ]
 }
  ```
 
