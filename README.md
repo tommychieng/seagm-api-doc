@@ -256,33 +256,51 @@ NONE
 }
 ```
 
+### Get account history
+```
+GET /v1/account-logs?uid=10001&timestamp=xx&signature=xx
+```
+Get account history
+
+**Parameters:**
+NONE
+
+**Rresponse:**
+```javascript
+{
+    "code": 200, 
+    "data": {
+        "credits": 1000, 
+        "email": "fairynomore@seagm.com", 
+        "id": 10001, 
+        "username": "fairynomore"
+    }
+}
+```
+
 ### Get card category list
 ```
 GET /v1/card-categories 
 ```
 
-**Response:**
+**Response:**{"code":200,"data":{"total":138,"begin":0,"end":12,"orders":[{"id":6936740,"user_account_id":10002,"handler_id":10002,"currency":"CNY","bank_account_id":null,"action_id":2,"action":"online_payment","relative_id":5957164,"remark":"payment [#P5957164]","created":1522048297,"updated":null,"accountId":10002,"amount":-6.7400000000000002,"
 ```javascript
 {
     "code": 200, 
-    "data": [
-        {
-            "id": 1, 
-            "name": "Cubizone Cubicards (MY)"
-        }, 
-        {
-            "id": 3, 
-            "name": "A-Cash (SEA)"
-        }, 
-        {
-            "id": 4, 
-            "name": "GoPlayPlay "
-        }, 
-        {
-            "id": 6, 
-            "name": "MyCard (TW)"
-        }, 
-        .....
+    "data": {
+        "total": 138,
+        "begin": 0,
+        "end": 12,
+        "orders": [
+            {
+                "id":6936740,
+                "user_account_id": 10000,
+                "currency": "MYR",
+            },
+            ....
+        ]
+    }
+}
  ```
 
 ### Get card category details
