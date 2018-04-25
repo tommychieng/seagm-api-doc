@@ -20,7 +20,7 @@
 * HTTP `429` return code is used when breaking a request rate limit.
 * HTTP `418` return code is used when an IP has been auto-banned for continuing to send requests after receiving `429` codes.
 * HTTP `5XX` return codes are used for internal errors; the issue is on
-  Binance's side.
+  server's side.
 * HTTP `504` return code is used when the API successfully sent the message
 but not get a response within the timeout period.
 It is important to **NOT** treat this as a failure; the execution status is
@@ -34,7 +34,7 @@ It is important to **NOT** treat this as a failure; the execution status is
 ```
 * Specific error codes
 ## 1xxx - Network issues
-#### 1000 UNKNOWN
+#### 100 UNKNOWN
  * An unknown error occured while processing the request.
 #### 1001 DISCONNECTED
  * Internal error; unable to process your request. Please try again.
@@ -58,7 +58,7 @@ It is important to **NOT** treat this as a failure; the execution status is
  * Too many new orders; current limit is %s orders per %s.
 #### 1016 SERVICE_SHUTTING_DOWN
  * This service is no longer available.
-#### 1020 UNSUPPORTED_OPERATION
+#### 102 UNSUPPORTED_OPERATION
  * This operation is not supported.
 #### 1021 INVALID_TIMESTAMP
  * Timestamp for this request is outside of the recvWindow.
@@ -66,24 +66,24 @@ It is important to **NOT** treat this as a failure; the execution status is
 #### 1022 INVALID_SIGNATURE
  * Signature for this request is not valid.
 
-## 2xxx - Success
+## 2xx - Success
  * Success
-#### 2000 Get Success
+#### 200 Get Success
  * Success
-#### 2010 Post Success
+#### 201 Post Success
  * Order Success
 
-## 4xxx - Request issues
+## 4xx - Request issues
  * The request has a problem
-#### 4000 Error
+#### 400 Error
  * Error
-#### 4010 Missing UID or invalid UID
-#### 4040 Not Found
-#### 4050 Invalid Method
-#### 4060 Insufficient Credit
+#### 401 Missing UID or invalid UID
+#### 404 Not Found
+#### 405 Invalid Method
+#### 406 Insufficient Credit
 
-## 5xxx - Server issues
-#### 5000 Server failure
+## 5xx - Server issues
+#### 500 Server failure
 
 # CURRENCY
 * Can only use SEAGM credits to buy cards
