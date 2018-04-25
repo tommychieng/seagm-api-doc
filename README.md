@@ -270,10 +270,13 @@ NONE
 {
     "code": 200, 
     "data": {
-        "credits": 1000, 
-        "email": "fairynomore@seagm.com", 
-        "id": 10001, 
-        "username": "fairynomore"
+        "total": 1000, 
+        "begin": 0, 
+        "end": 100, 
+        "logs": [
+          {},
+          ....
+        ]
     }
 }
 ```
