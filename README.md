@@ -151,7 +151,7 @@ uid | 10000
 * **curl command:**
     ```
     (HMAC SHA256)
-    [linux]$ curl -X POST 'https://api.seagm.com/v1/me?timestamp=1499827319559&uid=10000&sign=c8db56825ae71d6d79447849e617115f4a920fa2acdcab2b053c4b2838bd6b71'
+    [linux]$ curl 'https://api.seagm.com/v1/me?timestamp=1499827319559&uid=10000&signature=c8db56825ae71d6d79447849e617115f4a920fa2acdcab2b053c4b2838bd6b71'
     ```
 
 ### SIGNED Endpoint Examples for POST /v1/orders
@@ -174,7 +174,7 @@ Body | Value
 type_id | 1
 buy_amount | 10
 
-* **queryString:** uid=10000&timestamp=1499827319559&sign=c8db56825ae71d6d79447849e617115f4a920fa2acdcab2b053c4b2838bd6b71
+* **queryString:** uid=10000&timestamp=1499827319559&signature=c8db56825ae71d6d79447849e617115f4a920fa2acdcab2b053c4b2838bd6b71
 * **requestBody:** type_id=1&buy_amount=10
 * **HMAC SHA256 signature:**
     ```
@@ -185,7 +185,7 @@ buy_amount | 10
 * **curl command:**
     ```
     (HMAC SHA256)
-    [linux]$ curl -X POST 'https://api.seagm.com/v1/orders?uid=10000&timestamp=1499827319559&sign=c8db56825ae71d6d79447849e617115f4a920fa2acdcab2b053c4b2838bd6b71' -d 'type_id=1&buy_amount=10'
+    [linux]$ curl -X POST 'https://api.seagm.com/v1/orders?uid=10000&timestamp=1499827319559&signature=c8db56825ae71d6d79447849e617115f4a920fa2acdcab2b053c4b2838bd6b71' -d 'type_id=1&buy_amount=10'
     ```
 
 # Public API Endpoints
@@ -236,7 +236,7 @@ NONE
 
 ### Get account details
 ```
-GET /v1/me?uid=10001&timestamp=xx&sign=xx
+GET /v1/me?uid=10001&timestamp=xx&signature=xx
 ```
 Get balance and other account information.
 
