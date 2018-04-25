@@ -480,12 +480,14 @@ GET /v1/card-orders/:order_id
 ```
 
 **Attributes:**
-Attributes | Value
+
+Attribute | Value
 ------------ | ------------
 order_id | 10026
 
 **Parameters:**
-Parameters | Value
+
+Parameter | Value
 ------------ | ------------
 uid | 10000
 timesteamp | 1000000000
