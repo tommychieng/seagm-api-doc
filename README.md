@@ -476,8 +476,20 @@ limit | 12
 
 ### Get order details
 ```
-GET /v1/card-orders/:id 
+GET /v1/card-orders/:order_id 
 ```
+
+**Attributes:**
+Attributes | Value
+------------ | ------------
+order_id | 10026
+
+**Parameters:**
+Parameters | Value
+------------ | ------------
+uid | 10000
+timesteamp | 1000000000
+
 **Response:**
 ```javascript
 {
