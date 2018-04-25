@@ -263,7 +263,13 @@ GET /v1/account-logs?uid=10001&timestamp=xx&signature=xx
 Get account history
 
 **Parameters:**
-NONE
+
+Parameter | Value | Mandatory
+------------ | ------------
+uid | 10000 | Yes
+timestamp | 1000000000 | Yes
+limit | 12 | No
+offset | 0 | No
 
 **Rresponse:**
 ```javascript
@@ -301,8 +307,22 @@ GET /v1/card-categories
 
 ### Get card category details
 ```
-GET /v1/card-categories/:id 
+GET /v1/card-categories/:category_id 
 ```
+
+**Attributes:**
+
+Attribute | Value
+------------ | ------------
+category_id | 1
+
+**Parameters:**
+
+Parameter | Value
+------------ | ------------
+uid | 10000
+timestamp | 1000000000
+
 **Response:**
 ```javascript
 {
@@ -316,8 +336,21 @@ GET /v1/card-categories/:id
 
 ### Get card type list of specified card category
 ```
-GET /v1/card-categories/:id/card-types
+GET /v1/card-categories/:category_id/card-types
 ```
+
+**Attributes:**
+
+Attribute | Value
+------------ | ------------
+category_id | 1
+
+**Parameters:**
+
+Parameter | Value
+------------ | ------------
+uid | 10000
+timestamp | 1000000000
 
 **Response:**
 ```javascript
@@ -347,8 +380,22 @@ GET /v1/card-categories/:id/card-types
 
 ### Get card type details
 ```
-GET /v1/card-types/:id 
+GET /v1/card-types/:type_id 
 ```
+
+**Attributes:**
+
+Attribute | Value
+------------ | ------------
+type_id | 10026
+
+**Parameters:**
+
+Parameter | Value
+------------ | ------------
+uid | 10000
+timestamp | 1000000000
+
 **Response:**
 ```javascript
 {
@@ -375,6 +422,8 @@ Parameter | Value
 ------------ | ------------
 type_id | 1234
 buy_amount | 2
+uid | 10000
+timestamp | 1000000000
 
 **Response:**
 ```javascript
@@ -411,6 +460,8 @@ Parameter | Value
 ------------ | ------------
 offset | 0
 limit | 12
+uid | 10000
+timestamp | 10000000000
 
 **Response:**
 ```javascript
