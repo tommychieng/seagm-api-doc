@@ -105,7 +105,7 @@ It is important to **NOT** treat this as a failure; the execution status is
   Use your `secretKey` as the key and `totalParams` as the value for the HMAC operation.
 * The `signature` is **not case sensitive**.
 * `totalParams` is defined as the `query string` concatenated with the
-  `request body`.
+  `request body`, Key sort.
 
 ## Timing security
 * A `SIGNED` endpoint also requires a parameter, `timestamp`, to be sent which
