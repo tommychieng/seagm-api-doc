@@ -136,53 +136,57 @@ Linux command line using `echo`, `openssl`, and `curl`.
 
 Key | Value
 ------------ | ------------
-uid | 10000
+uid | 10001
 secretKey | NhqPtmdSJYdKjVHjA7PZj4Mge3R5YNiP1e3UZjInClVN65XAbvqqM6A7H5fATj0j
-
 
 Parameter | Value
 ------------ | ------------
 timestamp | 1499827319559
-uid | 10000
+uid | 10001
 
-* **queryString:** timestamp=1499827319559&uid=10000
+* **queryString:** timestamp=1499827319559&uid=10001
 * **HMAC SHA256 signature:**
     ```
-    [linux]$ echo -n "timestamp=1499827319559&uid=10000" | openssl dgst -sha256 -hmac "NhqPtmdSJYdKjVHjA7PZj4Mge3R5YNiP1e3UZjInClVN65XAbvqqM6A7H5fATj0j"
+    [linux]$ echo -n "timestamp=1499827319559&uid=10001" | openssl dgst -sha256 -hmac "NhqPtmdSJYdKjVHjA7PZj4Mge3R5YNiP1e3UZjInClVN65XAbvqqM6A7H5fATj0j"
     (stdin)= c8db56825ae71d6d79447849e617115f4a920fa2acdcab2b053c4b2838bd6b71
     ```
     
 * **curl command:**
     ```
     (HMAC SHA256)
-    [linux]$ curl 'https://api.seagm.sandbox.io/v1/me?timestamp=1499827319559&uid=10000&signature=c8db56825ae71d6d79447849e617115f4a920fa2acdcab2b053c4b2838bd6b71'
+    [linux]$ curl 'https://api.seagm.sandbox.io/v1/me?timestamp=1499827319559&uid=10001&signature=c8db56825ae71d6d79447849e617115f4a920fa2acdcab2b053c4b2838bd6b71'
     ```
 
-### SIGNED Endpoint Examples for GET /v1/card-orders
+### SIGNED Endpoint Examples for POST /v1/card-orders
 Here is a step-by-step example of how to send a vaild signed payload from the
 Linux command line using `echo`, `openssl`, and `curl`.
 
 Key | Value
 ------------ | ------------
-uid | 10000
+uid | 10001
 secretKey | NhqPtmdSJYdKjVHjA7PZj4Mge3R5YNiP1e3UZjInClVN65XAbvqqM6A7H5fATj0j
-
 
 Parameter | Value
 ------------ | ------------
 timestamp | 1499827319559
-uid | 10000
+uid | 10001
 
-* **queryString:** uid=10000&timestamp=1499827319559&signature=c8db56825ae71d6d79447849e617115f4a920fa2acdcab2b053c4b2838bd6b71
+Field | Value
+------------ | ------------
+type_id | 1
+buy_amount | 2
+
+* **queryString:** uid=10001&timestamp=1499827319559&signature=c8db56825ae71d6d79447849e617115f4a920fa2acdcab2b053c4b2838bd6b71
+* **requestBody:** type_id=1&buy_amount=2
 * **HMAC SHA256 signature:**
     ```
-    [linux]$ echo -n "buy_amount=10&timestamp=1499827319559&type_id=1&uid=10000" | openssl dgst -sha256 -hmac "NhqPtmdSJYdKjVHjA7PZj4Mge3R5YNiP1e3UZjInClVN65XAbvqqM6A7H5fATj0j"
+    [linux]$ echo -n "buy_amount=2&timestamp=1499827319559&type_id=1&uid=10001" | openssl dgst -sha256 -hmac "NhqPtmdSJYdKjVHjA7PZj4Mge3R5YNiP1e3UZjInClVN65XAbvqqM6A7H5fATj0j"
     (stdin)= 0fd168b8ddb4876a0358a8d14d0c9f3da0e9b20c5d52b2a00fcf7d1c602f9a77
     ```
 * **curl command:**
     ```
     (HMAC SHA256)
-    [linux]$ curl 'https://api.seagm.sandbox.io/v1/card-orders?uid=10000&timestamp=1499827319559&signature=c8db56825ae71d6d79447849e617115f4a920fa2acdcab2b053c4b2838bd6b71'
+    [linux]$ curl -x 'POST' 'https://api.seagm.sandbox.io/v1/card-orders?uid=10001&timestamp=1499827319559&signature=c8db56825ae71d6d79447849e617115f4a920fa2acdcab2b053c4b2838bd6b71' -d 'type_id=1&buy_amount=2'
     ```
 
 # Public API Endpoints
