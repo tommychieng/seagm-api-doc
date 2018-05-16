@@ -40,6 +40,8 @@ It is important to **NOT** treat this as a failure; the execution status is
  * Internal error; unable to process your request. Please try again.
 #### 1002 UNAUTHORIZED
  * You are not authorized to execute this request.
+#### 1003 Prohibit a guest access
+ * Prohibit a guest access
 #### 1003 TOO_MANY_REQUESTS
  * Too many requests.
  * Too many requests queued.
