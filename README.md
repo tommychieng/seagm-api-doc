@@ -185,7 +185,7 @@ buy_amount | 10
 * **curl command:**
     ```
     (HMAC SHA256)
-    [linux]$ curl -X POST 'https://api.seagm.sandbox.io/v1/orders?uid=10000&timestamp=1499827319559&signature=c8db56825ae71d6d79447849e617115f4a920fa2acdcab2b053c4b2838bd6b71' -d 'type_id=1&buy_amount=10'
+    [linux]$ curl -X POST 'https://api.seagm.sandbox.io/v1/card-orders?uid=10000&timestamp=1499827319559&signature=c8db56825ae71d6d79447849e617115f4a920fa2acdcab2b053c4b2838bd6b71' -d 'type_id=1&buy_amount=10'
     ```
 
 # Public API Endpoints
