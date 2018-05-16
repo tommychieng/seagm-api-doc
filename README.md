@@ -67,6 +67,8 @@ It is important to **NOT** treat this as a failure; the execution status is
  * Timestamp for this request was 1000ms ahead of the server's time.
 #### 1022 INVALID_SIGNATURE
  * Signature for this request is not valid.
+#### 1023 Prohibit a guest access
+#### 1024 Timestamp exceeds recvive window
 
 ## 2xx - Success
  * Success
