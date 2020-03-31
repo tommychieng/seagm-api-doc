@@ -421,10 +421,13 @@ POST /v1/card-orders
 
 Parameter | Value
 ------------ | ------------
-type_id | 1234
-buy_amount | 2
 uid | 10000
 timestamp | 1000000000
+
+Field | Value
+------------ | ------------
+type_id | 1
+buy_amount | 2
 
 **Response:**
 ```javascript
