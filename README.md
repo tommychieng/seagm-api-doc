@@ -1,4 +1,5 @@
-# Rest API for SEAGM (2018-02-07)
+# Rest API for SEAGM (updated: 2018-02-07)
+# Updated (Mar 2020)
 # General API Information
 * The base endpoint is: **https://api.seagm.io/**
 * Sandbox service endpoint is: **https://api.sandbox.seagm.io/**
